@@ -1,5 +1,14 @@
 ####################
 #############ART####
+logo = ''' 
+ _                                             
+| |                                            
+| |__   __ _ _ __   __ _ _ __ ___   __ _ _ __  
+| '_ \ / _` | '_ \ / _` | '_ ` _ \ / _` | '_ \ 
+| | | | (_| | | | | (_| | | | | | | (_| | | | |
+|_| |_|\__,_|_| |_|\__, |_| |_| |_|\__,_|_| |_|
+                    __/ |                      
+                   |___/    '''
 stages = ['''
   +---+
   |   |
@@ -73,6 +82,7 @@ end_of_game = False
 lives = 6
 already_guessed = []
 #############Main loop with user guess assigned to varialbe
+print(logo)
 while not end_of_game:
     guess = input("Guess a letter!:\n").lower()
 ################################################
@@ -104,5 +114,5 @@ while not end_of_game:
         print("You win!")
     if lives == 0:
         end_of_game = True
-        print("You lose!")
+        print(f"You lose!\nThe word was \"{chosen_word}\"")
 ################################################
